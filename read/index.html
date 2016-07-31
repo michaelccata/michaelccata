@@ -1,0 +1,33 @@
+---
+layout: default
+title: Reading is Cool!
+---
+
+<br>
+<br>
+
+
+{% for post in paginator.posts %}
+<div class="panel panel-default">
+  <div class="panel-body">
+    <time class="media-meta text-muted" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <h3 class="media-heading"><a style="color:black" href="{{ post.url }}">{{ post.title }}</a></h3>
+    <h5>  {{ post.sub_title }} </h5>
+    <h4><a class="btn btn-sm btn-primary" href="{{ post.url }}" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a></h4>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+{% endfor %} {% if paginator.total_pages > 1 %}
+<p class="pager">
+  {% if paginator.previous_page %}
+  <p class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous page</a>
+  </p>
+  {% endif %}
+  {% if paginator.next_page %}
+  <p class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next page &rarr;</a>
+  </p>
+  {% endif %}
+</p>
+{% endif %}

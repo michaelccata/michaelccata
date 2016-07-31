@@ -1,0 +1,21 @@
+---
+layout: bpost
+title: Don't Eat Hot Dogs in Midtown
+post_title: Don't Eat Hot Dogs in Midtown
+sub_title: Tracking the worst street vendors in NYC
+date: 05/01/2016
+tags: PUBLIC POLICY + 311 DATA
+---
+		<p><b>Courtney Kasuboski, a (now?) reader, asked where to find the best hotdog in the city.</b> Problem is, not many people are raving on social media about their $2 grab-and-gos. So, I had ask the opposite question: where are the <b>*worst*</b> street-vendors in the city?</p>
+		<p><b>So, I turned to public health records.</b> Specifically, <a href="https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9">311 Call Records</a> filed as "Food poisoning" from "Street Vendors".</p>
+		<p><b>New York City keeps great records</b> and continues to develop and share with the <a href="http://www1.nyc.gov/site/doitt/initiatives/open-data.page">community.</a> After a quick query (see below) via their version of a SOAP URL (they call the language "SoQL" which is...cute?) we get around 750 results over the past 5 years.</p>
+
+		<p>
+			<iframe width='100%' height='520' frameborder='0' src='https://michaelcata.cartodb.com/viz/a7a00728-7e82-11e5-b3b6-0e8c56e2ffdb/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+		</p>
+
+		<p><b>The map's verdict? Avoid central Midtown and Fidi if you want to grab some food on the run.</b></p>
+		<p><b>It's not the most scientific study in the world.</b> We're relying heavily on self-reported cases of food-borne illness where people may misattribute their stomache ache for their most questionable meal of the day. Maybe they ate Chipotle right before? But the map should confirms your expectations. Midtown and FiDi are heavy traffic areas with lots of vendors and even more tourists. Turn-over's got to be high.</p>
+
+		<p>Here's to sticking with tacos next time you visit Court!</p>
+		<pre><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$select=borough,%20incident_zip,%20latitude,%20longitude%20&$where=complaint_type=%22Food%20Poisoning%22%20AND%20location_type=%22Food%20Cart%20Vendor%22&$limit=2500000</code></pre>

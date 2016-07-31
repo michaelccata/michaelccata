@@ -1,0 +1,16 @@
+
+# keeping the lights-on specs
+exclude:
+  - Gemfile
+  - Gemfile.lock
+baseurl: ""
+timezone: America/New_York
+future: TRUE
+
+# blog related ish
+gems: [jekyll-paginate]
+excerpt_separator: <!–break–>
+paginate: 5
+paginate_path: "read/page:num"
+kramdown: 
+  input: GFM

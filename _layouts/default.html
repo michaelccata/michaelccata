@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+  {% if page.title %}
+    {{ page.title }}
+  {% else %}
+    Default Page Title
+  {% endif %}
+  </title>
+  <meta name="description" content="Organization Design: Think Barbarians at the Gate, but like people clamoring for left-over meeting cookies. Check out my riffs on productivity, hidden costs, and risk.">
+  <meta property="og:description" content="Organization Design: Think Barbarians at the Gate, but like people clamoring for left-over meeting cookies. Check out my riffs on productivity, hidden costs, and risk.">
+  <meta property="og:image" content="http://michaelcata.com/images">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="{{base}}/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="{{base}}/css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="{{base}}/css/michael-cata.webflow.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","PT Sans:400,400italic,700,700italic","Fjalla One:regular","Playfair Display:regular,italic,700,700italic,900,900italic"]
+      }
+    });
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Hind|Oxygen|Work+Sans|Reem+Kufi" rel="stylesheet"> -->
+  <script type="text/javascript" src="{{base}}/js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="{{base}}/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <script type="{{base}}/text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66979201-1'], ['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <div class="sidebar-column">
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav navigation-bar">
+      <div class="w-container"><a href="{{base}}/" class="w-nav-brand logo-link"><h1 class="logo-text">Michael Cata</h1></a>
+        <nav role="navigation" class="w-nav-menu navigation-menu">
+          <p class="w-hidden-medium w-hidden-small w-hidden-tiny main-subheading">Δ advisor</p>
+          <div class="w-hidden-medium w-hidden-small w-hidden-tiny divider"></div><a href="{{base}}/work" class="w-nav-link nav-link">Work</a><a href="{{base}}/read" class="w-nav-link nav-link">Read</a><a href="{{base}}/coffee" class="w-nav-link nav-link">Coffee?</a>
+          <div class="divider"></div>
+          <div class="social-link-group">
+            <a href="https://github.com/michaelccata" class="w-inline-block social-icon-link"><img width="25" src="{{base}}/images/social-33.svg">
+            </a>
+			      <a href="https://twitter.com/michaelccata" class="w-inline-block social-icon-link"><img width="25" src="{{base}}/images/social-18.svg">
+            </a>
+            <a href="https://www.linkedin.com/in/michael-cata-b1a16223" class="w-inline-block social-icon-link"><img width="25" src="{{base}}/images/social-09_1.svg">
+            </a>
+            <a href="mailto:michael@michaelcata.com" class="w-inline-block social-icon-link"><img width="25" src="{{base}}/images/social-25.svg">
+            </a>
+            <a href="tel:+19378293648" class="w-inline-block social-icon-link"><img width="47" src="{{base}}/images/social-40.svg">
+            </a>
+          </div>
+        </nav>
+        <div class="w-nav-button menu-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="w-container">
+      <!-- <div class="post-title-section">
+        <h1 class="blog-title">{% if page.post_title %}
+          {{ page.post_title }}
+        {% else %}
+          Default Post_Title
+        {% endif %}</h1>
+        <h6>{% if page.sub_title %}
+          {{ page.sub_title }}
+        {% else %}
+          Default Sub_Title
+        {% endif %}</h6>
+        <div class="post-info-wrapper">
+          <div class="post-info">{% if page.date %}
+            {{ page.date }}
+          {% else %}
+            Default Page Date
+          {% endif %}</div>
+          <div class="post-info">|</div>
+          <a class="post-info when-link">{% if page.tags %}
+            {{ page.tags }}
+          {% else %}
+            Default Page Tags
+          {% endif %}</a>
+        </div> -->
+        <div class="w-richtext body-copy">{{ content }}</div>
+        
+      </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="{{base}}/js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
