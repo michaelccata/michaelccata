@@ -143,121 +143,120 @@ tags: PUBLIC POLICY + EXTERNALITIES
 
 
 											<h3 id="below">Downloads+Links</h3>
-											<p><a href="https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips">Google BigQuery Yellow-Cab Tables</a><p>
-											<p><!--<a href="{{base}}/data/fulltaxidata.csv">-->Minute-level summary of Yellow-Cab rides (CSV File Generated with the Query Above)<!--</a>--><p>
+											<p><a href="https://bigquery.cloud.google.com/table/nyc-tlc:yellow.trips">Google BigQuery Yellow-Cab Tables (Run query below and download the CSV)</a><p>
 											<p><a href="https://docs.google.com/spreadsheets/d/1swGHQMnAgseqQ3JKEGwxA1G0xIOGMHG3axhB_BQXdIU/edit#gid=0">Data Dictionary to ^</a><p>
 											<p><a href="{{base}}/data/MTA_CONSTRUCTION_FOIA_RESPONSE.xls">MTA Construction Data via FOIA response</a><p>
 											<p><a href="https://docs.google.com/spreadsheets/d/1KN7pKVpA5mgY7tIOsf7xMFDuU07GKdb2i9lPfUKf01g/edit#gid=0">Hand-coded MTA Construction Data for the 4,5,6</a><p>
 
 											<h3>BigQuery Language</h3>
-											<pre><code>SELECT
+{% highlight sql %}
 
-		 avg(total_amount) as avgcost,
-		 sum(total_amount) as sumcost,
-		 avg(passenger_count) as avgpassengers,
-		 sum(passenger_count) as sumpassengers,
-		 count(vendor_id) as rides,
-		 left(time(pickup_datetime), 5) as timer,
-		 hour(pickup_datetime) as hourr,
-		 date(pickup_datetime) as dayy
+SELECT
 
-		 FROM [nyc-tlc:yellow.trips]
+	avg(total_amount) as avgcost,
+	sum(total_amount) as sumcost,
+	avg(passenger_count) as avgpassengers,
+	sum(passenger_count) as sumpassengers,
+	count(vendor_id) as rides,
+	left(time(pickup_datetime), 5) as timer,
+	hour(pickup_datetime) as hourr,
+	date(pickup_datetime) as dayy
 
-		 WHERE
+FROM [nyc-tlc:yellow.trips]
 
-		 (SQRT(((-73.9493608 - pickup_longitude)*(-73.9493608 - pickup_longitude) + (40.7909394 - pickup_latitude)*(40.7909394 - pickup_latitude))) +
-		 SQRT(((-73.9460564 - pickup_longitude)*(-73.9460564 - pickup_longitude) + (40.7896073 - pickup_latitude)*(40.7896073 - pickup_latitude))) +
-		 SQRT(((-74.0172958 - pickup_longitude)*(-74.0172958 - pickup_longitude) + (40.6918326 - pickup_latitude)*(40.6918326 - pickup_latitude))) +
-		 SQRT(((-74.0207291 - pickup_longitude)*(-74.0207291 - pickup_longitude) + (40.6936548 - pickup_latitude)*(40.6936548 - pickup_latitude)))) < 0.2419078579274
+WHERE
 
-		 AND
+	(SQRT(((-73.9493608 - pickup_longitude)*(-73.9493608 - pickup_longitude) + (40.7909394 - pickup_latitude)*(40.7909394 - pickup_latitude))) + SQRT(((-73.9460564 - pickup_longitude)*(-73.9460564 - pickup_longitude) + (40.7896073 - pickup_latitude)*(40.7896073 - pickup_latitude))) + SQRT(((-74.0172958 - pickup_longitude)*(-74.0172958 - pickup_longitude) + (40.6918326 - pickup_latitude)*(40.6918326 - pickup_latitude))) + SQRT(((-74.0207291 - pickup_longitude)*(-74.0207291 - pickup_longitude) + (40.6936548 - pickup_latitude)*(40.6936548 - pickup_latitude)))) < 0.2419078579274
 
-		 year(pickup_datetime)>2009
+AND
 
-		 GROUP BY dayy, timer, hourr
+	year(pickup_datetime)>2009
 
-		 ORDER BY dayy, timer, hourr
+	GROUP BY dayy, timer, hourr
 
-		 LIMIT 50000000</code></pre>
+	ORDER BY dayy, timer, hourr
 
-											<h5>R Scripts</h5>
-											<pre><code>library("curl")
-		library("scales")
-		library("sqldf")
-		library("ggplot2")
-		library("jsonlite")
-		library("dplyr")
-		library("plyr")
-		library("scales")
-		library("tidyr")
-		library("dplyr")
-		library("mgcv")
-		library("magrittr")
-		library("ROCR")
-		library("grid")
-		library("extrafont")
-		library("Cairo")
+	LIMIT 50000000
 
-		####################################################
-		### Google BigQuery Results
-		taxicosts <- read.csv("/Users/michaelcata/Documents/NYC_GIT/Taxi/fulltaxidata.csv",
-		                      header = TRUE, stringsAsFactors = FALSE)
+{% endhighlight %}
 
-		### Cleaning
-		taxicosts$dayy <- as.Date(taxicosts$dayy)
-		#taxicosts$timer <- strptime(taxicosts$timer, "%H:%M")
-		##taxicosts$timer <- as.POSIXct(taxicosts$timer)
-		taxicosts$dayofweek <- weekdays(taxicosts$dayy)
-		taxicosts$dayofweek <- factor(taxicosts$dayofweek,
-		                              levels = c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"))
+											<h3>R Scripts</h3>
+{% highlight r %}
+library("curl")
+library("scales")
+library("sqldf")
+library("ggplot2")
+library("jsonlite")
+library("dplyr")
+library("plyr")
+library("scales")
+library("tidyr")
+library("dplyr")
+library("mgcv")
+library("magrittr")
+library("ROCR")
+library("grid")
+library("extrafont")
+library("Cairo")
 
-		### Construction Data
-		csched <- read.csv("/Users/michaelcata/Documents/NYC_GIT/Taxi/subwayconstruction3.csv", header = TRUE, stringsAsFactors = FALSE)
+####################################################
+### Google BigQuery Results
+taxicosts <- read.csv("/Users/michaelcata/Documents/NYC_GIT/Taxi/fulltaxidata.csv",
+                  header = TRUE, stringsAsFactors = FALSE)
 
-		### Cleaning
-		csched$cdate <- as.Date(csched$cdate)
-		csched$LexAll <- factor(csched$LexAll)
-		csched$LexRed <- factor(csched$LexRed)
-		csched$AllRed <- factor(csched$AllRed)
+### Cleaning
+taxicosts$dayy <- as.Date(taxicosts$dayy)
+#taxicosts$timer <- strptime(taxicosts$timer, "%H:%M")
+##taxicosts$timer <- as.POSIXct(taxicosts$timer)
+taxicosts$dayofweek <- weekdays(taxicosts$dayy)
+taxicosts$dayofweek <- factor(taxicosts$dayofweek,
+                              levels = c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"))
 
-		combined <- sqldf("select * from taxicosts join csched on dayy = cdate")
-		combined$LexAll <- factor(combined$LexAll)
-		combined$LexRed <- factor(combined$LexRed)
-		combined$AllRed <- factor(combined$AllRed)
-		combined$dayy <- as.Date(combined$dayy)
-		combined$dayofweek <- weekdays(combined$dayy)
-		combined$dayofweek <- factor(combined$dayofweek,
-		                             levels = c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"))
-		combined$timerr <- as.factor(combined$timer)
-		combined$timerrr <- as.numeric(combined$timerr)
+### Construction Data
+csched <- read.csv("/Users/michaelcata/Documents/NYC_GIT/Taxi/subwayconstruction3.csv", header = TRUE, stringsAsFactors = FALSE)
 
+### Cleaning
+csched$cdate <- as.Date(csched$cdate)
+csched$LexAll <- factor(csched$LexAll)
+csched$LexRed <- factor(csched$LexRed)
+csched$AllRed <- factor(csched$AllRed)
 
-
-		#### construction status specific tables
-		combinedn <- sqldf("select * from combined where LexAll = 0")
-		combinedc <- sqldf("select * from combined where LexAll = 1")
+combined <- sqldf("select * from taxicosts join csched on dayy = cdate")
+combined$LexAll <- factor(combined$LexAll)
+combined$LexRed <- factor(combined$LexRed)
+combined$AllRed <- factor(combined$AllRed)
+combined$dayy <- as.Date(combined$dayy)
+combined$dayofweek <- weekdays(combined$dayy)
+combined$dayofweek <- factor(combined$dayofweek,
+                             levels = c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"))
+combined$timerr <- as.factor(combined$timer)
+combined$timerrr <- as.numeric(combined$timerr)
 
 
-		#### running the integrals for each day
-		intcm <- sqldf("select * from combinedc where dayofweek = 'Monday'")
-		intnm <- sqldf("select * from combinedc where dayofweek = 'Monday'")
-		intcsat <- sqldf("select * from combinedc where dayofweek = 'Saturday'")
-		intnsat <- sqldf("select * from combinedn where dayofweek = 'Saturday'")
-		intcsun <- sqldf("select * from combinedc where dayofweek = 'Sunday'")
-		intnsun <- sqldf("select * from combinedn where dayofweek = 'Sunday'")
 
-		mondaydiff <- sintegral(intcm$timerrr, intcm$sumcost)$int - sintegral(intnm$timerrr, intnm$sumcost)$int
-		saturdaydiff <- sintegral(intcsat$timerrr, intcsat$sumcost)$int - sintegral(intnsat$timerrr, intnsat$sumcost)$int
-		sundaydiff <- sintegral(intcsun$timerrr, intcsun$sumcost)$int - sintegral(intnsun$timerrr, intnsun$sumcost)$int
+#### construction status specific tables
+combinedn <- sqldf("select * from combined where LexAll = 0")
+combinedc <- sqldf("select * from combined where LexAll = 1")
 
-		#### Subset days
-		subday <- sqldf("select * from combined where (cdatee = '2013-07-06' OR cdatee = '2013-07-13') AND hourr between 17 AND 21")
-		subday <- sqldf("select * from combined where (cdatee = '2013-07-06' OR cdatee = '2013-07-13')")
-		ggplot(data = subday, aes(timer, y=sumcost,group=dayy,color=factor(dayy)))+geom_smooth()
+#### running the integrals for each day
+intcm <- sqldf("select * from combinedc where dayofweek = 'Monday'")
+intnm <- sqldf("select * from combinedc where dayofweek = 'Monday'")
+intcsat <- sqldf("select * from combinedc where dayofweek = 'Saturday'")
+intnsat <- sqldf("select * from combinedn where dayofweek = 'Saturday'")
+intcsun <- sqldf("select * from combinedc where dayofweek = 'Sunday'")
+intnsun <- sqldf("select * from combinedn where dayofweek = 'Sunday'")
 
-		### timeline
-		ggplot(data = subset(combined, dayofweek %in% c("Saturday","Sunday")), aes(timerr, y=sumcost,group=LexAll,color=factor(LexAll))) +
-		  geom_smooth(fill = "red", alpha = .025) +
+mondaydiff <- sintegral(intcm$timerrr, intcm$sumcost)$int - sintegral(intnm$timerrr, intnm$sumcost)$int
+saturdaydiff <- sintegral(intcsat$timerrr, intcsat$sumcost)$int - sintegral(intnsat$timerrr, intnsat$sumcost)$int
+sundaydiff <- sintegral(intcsun$timerrr, intcsun$sumcost)$int - sintegral(intnsun$timerrr, intnsun$sumcost)$int
+
+#### Subset days
+subday <- sqldf("select * from combined where (cdatee = '2013-07-06' OR cdatee = '2013-07-13') AND hourr between 17 AND 21")
+subday <- sqldf("select * from combined where (cdatee = '2013-07-06' OR cdatee = '2013-07-13')")
+ggplot(data = subday, aes(timer, y=sumcost,group=dayy,color=factor(dayy)))+geom_smooth()
+
+### timeline
+ggplot(data = subset(combined, dayofweek %in% c("Saturday","Sunday")), aes(timerr, y=sumcost,group=LexAll,color=factor(LexAll))) + geom_smooth(fill = "red", alpha = .025) +
 		  facet_grid(~dayofweek)+labs(x='Time of Day',y="Average Taxi Revenue Per Minute") +
 		  scale_color_manual("Subway Status",  values = c("green", "red"),labels=c("Construction", "Normal"), breaks = rev(levels(combined$LexAll))) +
 		  scale_x_discrete(breaks = c("00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00")) +
@@ -266,12 +265,12 @@ tags: PUBLIC POLICY + EXTERNALITIES
 		  scale_y_continuous(labels = dollar)+ ggtitle("Minute-by-minute Taxi Revenue\n4,5,6 Corridor in Manhattan")
 
 
-		## timeline for union square snapshot day
-		ggplot(data = subday, aes(timerr, y=sumcost,group=dayy,color=factor(dayy)))+geom_smooth(fill = "red", alpha = .05)+labs(x='Time of Day',y="Average Taxi Revenue Per Minute") + scale_color_manual("Subway Status",  values = c("green", "red"),labels=c("Construction", "Normal"), breaks = rev(levels(subday$dayy))) + scale_x_discrete(breaks = c("00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"))
+## timeline for union square snapshot day
+ggplot(data = subday, aes(timerr, y=sumcost,group=dayy,color=factor(dayy)))+geom_smooth(fill = "red", alpha = .05)+labs(x='Time of Day',y="Average Taxi Revenue Per Minute") + scale_color_manual("Subway Status",  values = c("green", "red"),labels=c("Construction", "Normal"), breaks = rev(levels(subday$dayy))) + scale_x_discrete(breaks = c("00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"))
 
 
-		### rides boxplots
-		ggplot(data = subset(combined, dayofweek %in% c("Saturday","Sunday")), aes(factor(LexAll), y=rides,group=LexAll,color=factor(LexAll))) +
+### rides boxplots
+ggplot(data = subset(combined, dayofweek %in% c("Saturday","Sunday")), aes(factor(LexAll), 	y=rides,group=LexAll,color=factor(LexAll))) +
 		   geom_boxplot(outlier.colour = "gray", alpha = .01) +
 		   facet_grid(~dayofweek) +
 		   stat_summary(fun.y=median, geom="line", aes(group=1)) +
@@ -284,8 +283,8 @@ tags: PUBLIC POLICY + EXTERNALITIES
 		   ggtitle("Average Pickups Per Minute")
 
 
-		### sumcost boxplots
-		ggplot(data = subset(combined, dayofweek %in% c("Saturday","Sunday")), aes(factor(LexAll), y=sumcost, group=LexAll, color=factor(LexAll))) +
+### sumcost boxplots
+ggplot(data = subset(combined, dayofweek %in% c("Saturday","Sunday")), aes(factor(LexAll), y=sumcost, group=LexAll, color=factor(LexAll))) +
 		   geom_boxplot(outlier.colour = "gray", alpha = .01) +
 		   facet_grid(~dayofweek) +
 		   stat_summary(fun.y=median, geom="line", aes(group=1), "indianred3") +
@@ -298,20 +297,20 @@ tags: PUBLIC POLICY + EXTERNALITIES
 		   ylim(0, 1750)
 
 
-		### stat plots aka proof
-		p <- ggplot(combined, aes(x=rides))
-		pu <- ddply(combined, "LexAll", summarise, grp.mean=mean(rides))
-		ridesdensityplot <- p + geom_density(aes(color = factor(LexAll))) + xlim(0,150) + geom_vline(data = pu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
+### stat plots aka proof
+p <- ggplot(combined, aes(x=rides))
+pu <- ddply(combined, "LexAll", summarise, grp.mean=mean(rides))
+ridesdensityplot <- p + geom_density(aes(color = factor(LexAll))) + xlim(0,150) + geom_vline(data = pu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
 
-		m <- ggplot(combined, aes(x=sumcost))
-		mu <- ddply(combined, "LexAll", summarise, grp.mean=mean(sumcost))
-		costdensityplot <- m + geom_density(aes(color = factor(LexAll))) + xlim(0,1750) + geom_vline(data = mu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
+m <- ggplot(combined, aes(x=sumcost))
+mu <- ddply(combined, "LexAll", summarise, grp.mean=mean(sumcost))
+costdensityplot <- m + geom_density(aes(color = factor(LexAll))) + xlim(0,1750) + geom_vline(data = mu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
 
-		# density plots
-		costcdensityplot <- m + stat_ecdf(aes(color = factor(LexAll))) + xlim(0,1750) + geom_vline(data = mu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
-		ridescdensityplot <- p + stat_ecdf(aes(color = factor(LexAll))) + xlim(0,175) + geom_vline(data = pu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
+# density plots
+costcdensityplot <- m + stat_ecdf(aes(color = factor(LexAll))) + xlim(0,1750) + geom_vline(data = mu, aes(xintercept=grp.mean, color = LexAll), linetype="dashed")
+ridescdensityplot <- p + stat_ecdf(aes(color = factor(LexAll))) + xlim(0,175) + geom_vline(data = pu, aes xintercept=grp.mean, color = LexAll), linetype="dashed")
 
-		##########################################################</code></pre>
+##########################################################{% endhighlight %}
 
 
 											<hr />

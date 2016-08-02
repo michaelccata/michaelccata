@@ -18,4 +18,6 @@ tags: PUBLIC POLICY + 311 DATA
 		<p><b>It's not the most scientific study in the world.</b> We're relying heavily on self-reported cases of food-borne illness where people may misattribute their stomache ache for their most questionable meal of the day. Maybe they ate Chipotle right before? But the map should confirms your expectations. Midtown and FiDi are heavy traffic areas with lots of vendors and even more tourists. Turn-over's got to be high.</p>
 
 		<p>Here's to sticking with tacos next time you visit Court!</p>
-		<pre><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$select=borough,%20incident_zip,%20latitude,%20longitude%20&$where=complaint_type=%22Food%20Poisoning%22%20AND%20location_type=%22Food%20Cart%20Vendor%22&$limit=2500000</code></pre>
+		{% highlight html %}
+https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$select=borough,%20incident_zip,%20latitude,%20longitude%20&$where=complaint_type=%22Food%20Poisoning%22%20AND%20location_type=%22Food%20Cart%20Vendor%22&$limit=2500000
+{% endhighlight %}

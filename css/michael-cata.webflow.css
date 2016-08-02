@@ -221,18 +221,20 @@ ul {
   margin-top: 0px;
   margin-bottom: 20px;
   padding-left: 40px;
+  padding-right: 100px;
 }
 
 ol {
   margin-top: 0px;
   margin-bottom: 10px;
   padding-left: 40px;
+  padding-right: 100px;
   font-family: 'Greycliff CF' ;
   font-size: 1em; 
 }
 
 li {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.3em;
 }
 
@@ -518,14 +520,14 @@ figcaption {
 
 .body-copy {
   font-family: 'Greycliff CF' ;
-  font-size: 17.5px;
+  font-size: 17px;
 }
 
 .body-copy p {
   margin-top: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Hind";
   color: #000;
-  font-size: 1.075em;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.0px;
   text-rendering: optimizeLegibility;
@@ -546,7 +548,8 @@ figcaption {
 
 .body-copy li {
   margin-bottom: 3px;
-  font-family: 'Greycliff CF' ;
+  font-family: -apple-system, BlinkMacSystemFont, "Hind" ;
+  font-size: 15.5px;
 }
 
 .body-copy blockquote {

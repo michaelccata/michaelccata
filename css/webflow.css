@@ -1286,7 +1286,7 @@ textarea.w-select {
 }
 .w-richtext figure {
   position: relative;
-  max-width: 60%;
+  max-width: 100%;
 }
 .w-richtext figure > div:before,
 .w-richtext figure img {

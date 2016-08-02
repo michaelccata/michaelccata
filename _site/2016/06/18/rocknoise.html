@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/css/webflow.css">
   <link rel="stylesheet" type="text/css" href="/css/michael-cata.webflow.css">
+  <link rel="stylesheet" type="text/css" href="/css/highlight.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -147,145 +148,139 @@
   <li>D3 is pretty great to use if you find something that’s prebuilt, it just really limits your ability to customize.</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>______________________________
+<p><br /></p>
 
-R Code
-______________________________
+<h2 id="r-code">R Code</h2>
 
-### Import a bunch of packages
-library("curl")
-library("scales")
-library("sqldf")
-library("ggplot2")
-library("jsonlite")
-library("plyr")
-library("dplyr")
-library("scales")
-library("tidyr")
-library("dplyr")
-library("mgcv")
-library("magrittr")
-library("jsonlite")
-library("rvest")
-library("stringr")
-library("htmltools")
-library("htmlwidgets")
-library("metricsgraphics")
-library("RColorBrewer")
-library('xml2')
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1">### Import a bunch of packages
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"curl"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"scales"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"sqldf"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"ggplot2"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"jsonlite"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"plyr"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"dplyr"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"scales"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"tidyr"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"dplyr"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"mgcv"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"magrittr"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"jsonlite"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"rvest"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"stringr"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"htmltools"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"htmlwidgets"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"metricsgraphics"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"RColorBrewer"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s1">'xml2'</span><span class="p">)</span><span class="w">
 
 
-### Pull Kansas City 311 records regarding noise control from Socrata
-base_table &lt;- fromJSON(
-"https://data.kcmo.org/resource/cyqf-nban.json?category=Noise%20Control&amp;$limit=2000",
-simplifyVector = TRUE,
-simplifyDataFrame = TRUE
-)
+</span><span class="c1">### Pull Kansas City 311 records regarding noise control from Socrata
+</span><span class="n">base_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fromJSON</span><span class="p">(</span><span class="w">
+</span><span class="s2">"https://data.kcmo.org/resource/cyqf-nban.json?category=Noise%20Control&amp;$limit=2000"</span><span class="p">,</span><span class="w">
+</span><span class="n">simplifyVector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+</span><span class="n">simplifyDataFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
+</span><span class="p">)</span><span class="w">
 
-### Function to extract case number from URL 
-substrRight &lt;- function(x, n){
-  substr(x, nchar(x) - n + 1, nchar(x))
-}
+</span><span class="c1">### Function to extract case number from URL 
+</span><span class="n">substrRight</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">){</span><span class="w">
+  </span><span class="n">substr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">nchar</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nchar</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-### Create variable for case numbers
-base_table$case_no &lt;- substrRight(base_table$case_id, 10)
+</span><span class="c1">### Create variable for case numbers
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_no</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">substrRight</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_id</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
 
-### Transform timestamp into date format
-base_table$create_date &lt;- as.Date(substr(base_table$create_date,1,10), "%Y-%m-%d")
+</span><span class="c1">### Transform timestamp into date format
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">create_date</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.Date</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">create_date</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="s2">"%Y-%m-%d"</span><span class="p">)</span><span class="w">
 
-### Scraper using the URL to pull the page source HTML, find the description node (rc_descrlong),
+</span><span class="c1">### Scraper using the URL to pull the page source HTML, find the description node (rc_descrlong),
 ### pull the specific text, and then apply that onto the respective call record
 ### from Socrata in the dataframe
-base_table$case_desc &lt;- sapply(base_table$case_url, function(x)
-  read_html(x) %&gt;%
-    html_nodes("rc_descrlong") %&gt;%
-    html_text())
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sapply</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_url</span><span class="p">,</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+  </span><span class="n">read_html</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">html_nodes</span><span class="p">(</span><span class="s2">"rc_descrlong"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">html_text</span><span class="p">())</span><span class="w">
 
-### Creating the count columns by search/count function str_count for various
+</span><span class="c1">### Creating the count columns by search/count function str_count for various
 ### descriptors in the complaint. THIS DICTIONARY IS FOR MAGNITUDE OF COMPLAINT
-base_table$music &lt;- str_count(base_table$case_desc, 'music|Music|guitar| bass | band | Band ')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">music</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">'music|Music|guitar| bass | band | Band '</span><span class="p">)</span><span class="w">
 
-base_table$rock &lt;- str_count(base_table$case_desc, ' rock | Rock | heavy metal | punk | Heavy Metal | Punk')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">rock</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' rock | Rock | heavy metal | punk | Heavy Metal | Punk'</span><span class="p">)</span><span class="w">
 
-base_table$rap &lt;- str_count(base_table$case_desc, ' rap | hip hop | Rap | HipHop | Hip Hop | pop | Pop')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">rap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' rap | hip hop | Rap | HipHop | Hip Hop | pop | Pop'</span><span class="p">)</span><span class="w">
 
-base_table$country &lt;- str_count(base_table$case_desc,  ' country | Country | folk | Folk s')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">country</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w">  </span><span class="s1">' country | Country | folk | Folk s'</span><span class="p">)</span><span class="w">
 
-base_table$djs &lt;- str_count(base_table$case_desc, ' dj |electronic|disco' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">djs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' dj |electronic|disco'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$club &lt;- str_count(base_table$case_desc, ' club ' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">club</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' club '</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$bar &lt;- str_count(base_table$case_desc, ' bar ')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">bar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' bar '</span><span class="p">)</span><span class="w">
 
-base_table$trash &lt;- str_count(base_table$case_desc, 'trash|garbage' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">trash</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">'trash|garbage'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$construction &lt;- str_count(base_table$case_desc, 'construction|tools| jack hammer |machine|Machinery|Machine|machinery|Tools|Construction' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">construction</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">'construction|tools| jack hammer |machine|Machinery|Machine|machinery|Tools|Construction'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$traffic &lt;- str_count(base_table$case_desc, ' cars | Car | Cars | car | Truck | truck | Trucks | trucks | traffic | Traffic | honk | Honk | honking | Honking | bike | bikes | Bike | Bikes |bicycle|Bicycle|motorcycle|Motorcycles' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">traffic</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' cars | Car | Cars | car | Truck | truck | Trucks | trucks | traffic | Traffic | honk | Honk | honking | Honking | bike | bikes | Bike | Bikes |bicycle|Bicycle|motorcycle|Motorcycles'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$people &lt;- str_count(base_table$case_desc, ' yell | Yell | shout | Shout| shouting | Shouting | yelling | Yelling | argue | Argue | arguing | Arguing ' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">people</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_count</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' yell | Yell | shout | Shout| shouting | Shouting | yelling | Yelling | argue | Argue | arguing | Arguing '</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-### Creating the count columns by search/count function str_count for various
+</span><span class="c1">### Creating the count columns by search/count function str_count for various
 ### descriptors in the complaint. 
 ### THIS DICTIONARY IS MORE CONSERVATIVE - ONLY COUNTS HITS AS 1 OR ZERO PER CATEGORY
-base_table$music &lt;- str_detect(base_table$case_desc, 'music|Music|guitar| bass | band | Band ')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">music</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">'music|Music|guitar| bass | band | Band '</span><span class="p">)</span><span class="w">
 
-base_table$rock &lt;- str_detect(base_table$case_desc, ' rock | Rock | heavy metal | punk | Heavy Metal | Punk')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">rock</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' rock | Rock | heavy metal | punk | Heavy Metal | Punk'</span><span class="p">)</span><span class="w">
 
-base_table$rap &lt;- str_detect(base_table$case_desc, ' rap | hip hop | Rap | HipHop | Hip Hop | pop | Pop')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">rap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' rap | hip hop | Rap | HipHop | Hip Hop | pop | Pop'</span><span class="p">)</span><span class="w">
 
-base_table$country &lt;- str_detect(base_table$case_desc,  ' country | Country | folk | Folk s')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">country</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w">  </span><span class="s1">' country | Country | folk | Folk s'</span><span class="p">)</span><span class="w">
 
-base_table$djs &lt;- str_detect(base_table$case_desc, ' dj |electronic|disco' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">djs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' dj |electronic|disco'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$club &lt;- str_detect(base_table$case_desc, ' club |nightclub' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">club</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' club |nightclub'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$bar &lt;- str_detect(base_table$case_desc, ' bar ')
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">bar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' bar '</span><span class="p">)</span><span class="w">
 
-base_table$trash &lt;- str_detect(base_table$case_desc, 'trash|garbage' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">trash</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">'trash|garbage'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$construction &lt;- str_detect(base_table$case_desc, 'construction|tools| jack hammer |machine|Machinery|Machine|machinery|Tools|Construction' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">construction</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">'construction|tools| jack hammer |machine|Machinery|Machine|machinery|Tools|Construction'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$traffic &lt;- str_detect(base_table$case_desc, ' cars | Car | Cars | car | Truck | truck | Trucks | trucks | traffic | Traffic | honk | Honk | honking | Honking | bike | bikes | Bike | Bikes |bicycle|Bicycle|motorcycle|Motorcycles' )
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">traffic</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' cars | Car | Cars | car | Truck | truck | Trucks | trucks | traffic | Traffic | honk | Honk | honking | Honking | bike | bikes | Bike | Bikes |bicycle|Bicycle|motorcycle|Motorcycles'</span><span class="w"> </span><span class="p">)</span><span class="w">
 
-base_table$people &lt;- str_detect(base_table$case_desc, ' yell | Yell | shout | Shout| shouting | Shouting | yelling | Yelling | argue | Argue | arguing | Arguing ' )
-
-
+</span><span class="n">base_table</span><span class="o">$</span><span class="n">people</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_detect</span><span class="p">(</span><span class="n">base_table</span><span class="o">$</span><span class="n">case_desc</span><span class="p">,</span><span class="w"> </span><span class="s1">' yell | Yell | shout | Shout| shouting | Shouting | yelling | Yelling | argue | Argue | arguing | Arguing '</span><span class="w"> </span><span class="p">)</span><span class="w">
 
 
-### Creating a summary table to aggregate the tabs
-summaryframe &lt;- data.frame(colMeans(base_table[30:40]),colSums(base_table[30:40]))
 
 
-______________________________
+</span><span class="c1">### Creating a summary table to aggregate the tabs
+</span><span class="n">summaryframe</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">colMeans</span><span class="p">(</span><span class="n">base_table</span><span class="p">[</span><span class="m">30</span><span class="o">:</span><span class="m">40</span><span class="p">]),</span><span class="n">colSums</span><span class="p">(</span><span class="n">base_table</span><span class="p">[</span><span class="m">30</span><span class="o">:</span><span class="m">40</span><span class="p">]))</span></code></pre></figure>
 
-Dimple.js D3 script -- kcnoise.tsv is a three column dataset based off summaryframe from the R code
-______________________________
+<p><br /></p>
 
-&lt;div id="chartContainer" style="
+<h2 id="dimplejs-d3-script">Dimple.js D3 script</h2>
+<p>(kcnoise.tsv is a three column dataset based off summaryframe from the R code)</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"chartContainer"</span> <span class="nx">style</span><span class="o">=</span><span class="s2">"
 	width:35em;
 	height:23.25em; 
 	display: block;
-    margin: 0 auto;"&gt;
-&lt;script src="http://d3js.org/d3.v3.min.js"&gt;&lt;/script&gt;
-  &lt;script src="/lib/dimple.v2.2.0.min.js"&gt;&lt;/script&gt;
-  &lt;script type="text/javascript"&gt;
-    var svg = dimple.newSvg("#chartContainer", 600, 400);
-    d3.tsv("/data/kcnoise.tsv", function (data) {
-      var myChart = new dimple.chart(svg, data);
-      myChart.setBounds(80, 30, 480, 330)
-      myChart.addMeasureAxis("x", "Hits");
-      myChart.addCategoryAxis("y", ["Source", "Complaint Type"]);
-      myChart.addSeries("Specific", dimple.plot.bar);
-      myChart.addLegend(200, 10, 380, 20, "right");
-      myChart.draw();
-    });
-  &lt;/script&gt;
-&lt;/div&gt;
-
-
-</code></pre>
-</div>
+    margin: 0 auto;"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://d3js.org/d3.v3.min.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"/lib/dimple.v2.2.0.min.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+    <span class="kd">var</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">dimple</span><span class="p">.</span><span class="nx">newSvg</span><span class="p">(</span><span class="s2">"#chartContainer"</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
+    <span class="nx">d3</span><span class="p">.</span><span class="nx">tsv</span><span class="p">(</span><span class="s2">"/data/kcnoise.tsv"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">myChart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dimple</span><span class="p">.</span><span class="nx">chart</span><span class="p">(</span><span class="nx">svg</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+      <span class="nx">myChart</span><span class="p">.</span><span class="nx">setBounds</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">480</span><span class="p">,</span> <span class="mi">330</span><span class="p">)</span>
+      <span class="nx">myChart</span><span class="p">.</span><span class="nx">addMeasureAxis</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span> <span class="s2">"Hits"</span><span class="p">);</span>
+      <span class="nx">myChart</span><span class="p">.</span><span class="nx">addCategoryAxis</span><span class="p">(</span><span class="s2">"y"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"Source"</span><span class="p">,</span> <span class="s2">"Complaint Type"</span><span class="p">]);</span>
+      <span class="nx">myChart</span><span class="p">.</span><span class="nx">addSeries</span><span class="p">(</span><span class="s2">"Specific"</span><span class="p">,</span> <span class="nx">dimple</span><span class="p">.</span><span class="nx">plot</span><span class="p">.</span><span class="nx">bar</span><span class="p">);</span>
+      <span class="nx">myChart</span><span class="p">.</span><span class="nx">addLegend</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"right"</span><span class="p">);</span>
+      <span class="nx">myChart</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+    <span class="p">});</span>
+  <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
 
 
           <br>
@@ -297,6 +292,16 @@ ______________________________
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="/js/webflow.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66979201-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 </html>

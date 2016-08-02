@@ -65,11 +65,12 @@ All the code is below. A few notes:
 * R's rvest library is stupid simple to use and deploy for webscraping
 * D3 is pretty great to use if you find something that's prebuilt, it just really limits your ability to customize.
 
-```
-______________________________
+<br>
 
-R Code
-______________________________
+## R Code
+
+
+{% highlight r %}
 
 ### Import a bunch of packages
 library("curl")
@@ -174,12 +175,16 @@ base_table$people <- str_detect(base_table$case_desc, ' yell | Yell | shout | Sh
 
 ### Creating a summary table to aggregate the tabs
 summaryframe <- data.frame(colMeans(base_table[30:40]),colSums(base_table[30:40]))
+{% endhighlight %}
+
+<br>
+
+## Dimple.js D3 script  
+(kcnoise.tsv is a three column dataset based off summaryframe from the R code)
 
 
-______________________________
+{% highlight js %}
 
-Dimple.js D3 script -- kcnoise.tsv is a three column dataset based off summaryframe from the R code
-______________________________
 
 <div id="chartContainer" style="
 	width:35em;
@@ -202,7 +207,6 @@ ______________________________
   </script>
 </div>
 
-
-```
+{% endhighlight %}
 
 
