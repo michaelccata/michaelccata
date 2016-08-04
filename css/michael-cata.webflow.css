@@ -645,7 +645,7 @@ figcaption {
   display: block;
   margin-top: 13px;
   margin-bottom: 20px;
-  font-family: 'Greycliff CF' ;
+  font-family: -apple-system, BlinkMacSystemFont, "Hind" ;
   color: #293241;
   font-size: 1em;
   line-height: 145%;
@@ -880,7 +880,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
   .navigation-menu {
     padding: 20px;
     border-radius: 5px;
-    background-color: #333;
+    background-color: rgba(255,255,255,.95);
   }
   .header-section {
     padding-top: 60px;
@@ -903,7 +903,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     padding: 13px 11px 11px;
     border-radius: 5px;
     background-color: hsla(0, 0%, 100%, .1);
-    color: #fff;
+    color: #fd4421;
   }
   .menu-button.w--open {
     background-color: #f0f0f0;
