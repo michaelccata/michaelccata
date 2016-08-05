@@ -5,7 +5,7 @@ title: about me
 
 ## Hey there, nice to meet you!
 
-My name is Michael Cata. I'm an National Park hiker, classic rock fan, R nerd, wannabe economist, and tech/management consultant.
+My name is Michael Cata. I'm an National Park hiker, classic rock fan, wannabe economist, and tech/management consultant.
 
 I help (mostly large) organizations understand their potential. That means things like recognizing the dignity of individual employees and avoiding the risks of becoming the next Enron, Kodak, Blackberry, GM, you get the picture. Restructuring, product development, cross-disciplinary teams, APIs, opportunity costs, and design sprints are words that perk my ears.
 
