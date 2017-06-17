@@ -1,6 +1,6 @@
 ---
-title: about me
 layout: default
+title: about me
 ---
 
 ## Hey there, nice to meet you!

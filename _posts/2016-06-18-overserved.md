@@ -1,17 +1,11 @@
 ---
-title: Overserved @ Overtime
-date: 2016-06-18 00:00:00 -04:00
-tags:
-- PUBLIC
-- POLICY
-- "+"
-- CRIME
-- DATA
 layout: bpost
+title: Overserved @ Overtime
 post_title: Overserved @ Overtime
 sub_title: Does extra time cut down on DUI arrests?
+date: 18/06/2016
+tags: PUBLIC POLICY + CRIME DATA
 ---
-
 Over 10,000 people die every year in alcohol related accidents. 1.5 million people are caught driving over 0.08 BAC every year. **Millions more** admit to driving after several drinks in self-reported surveys. Drunk drivers cross-cut gender, race, income, and other traditional segments in demographic research. But few studies have asked where folks drink prior to their arrest or accident. So where do all these people come from? Safe-driving advocacy groups cite several various venues: neighborhood bars, college parties, and anywhere someone might be suffering from alcoholism. Also present on that list? Sporting events.
 
 Researchers in 2011 found that [1 in 12 people](http://onlinelibrary.wiley.com/doi/10.1111/j.1530-0277.2010.01386.x/abstract) leaving sampled MLB and NFL games measured above the legal limit of 0.08 BAC. In 2015, the state of California partnered with an insurance company to explore the same question. They found a [77% increase](http://www.latimes.com/business/autos/la-fi-hy-super-bowl-drunk-driving-20150127-story.html) with alcohol-related crashes on Super Bowl Sunday.

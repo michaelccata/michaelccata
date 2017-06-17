@@ -1,8 +1,9 @@
 ---
-title: about me
 layout: default
+title: about me
 ---
 
+ 
 ## Michael Cata is a management consultant in NYC. 
 
 He works with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. 

@@ -1,14 +1,10 @@
 ---
-title: Rock and Roll *is* Noise Pollution
-date: 2016-06-18 00:00:00 -04:00
-tags:
-- PUBLIC
-- POLICY
-- "+"
-- MUSIC
 layout: bpost
+title: Rock and Roll *is* Noise Pollution
 post_title: Rock and Roll **is** Noise Pollution
 sub_title: AC/DC was totally wrong.
+date: 18/06/2016
+tags: PUBLIC POLICY + MUSIC
 ---
 
 Rowdy neighbors, honking traffic, or loud leafblowers are accepted as part of modern life. The nuissance seems random, inconsequential, and perhaps even silly. But noise pollution is, quite literally, a textbook example of an externality. You'll find it somewhere on the "The more you know" sidebar in the market failure chapter. But! Apparently, it's a [serious problem](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4336190/) that's [only getting worse](http://ehp.niehs.nih.gov/1307272/).
