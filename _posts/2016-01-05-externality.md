@@ -1,10 +1,11 @@
 ---
-layout: bpost
 title: Define Externality
+date: 2016-01-05 00:00:00 -05:00
+tags:
+- ECON
+layout: bpost
 post_title: Define Externality
 sub_title: Ya, $10 word, deal with it
-date: 05/01/2016
-tags: ECON 
 ---
 
 Externality is a $10 word. The term was coined in the early 20th Century and exhibits all the utilitarian formality one would expect from Cambridge economists. 
