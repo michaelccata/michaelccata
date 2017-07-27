@@ -10,7 +10,7 @@ My name is Michael Cata. I’m an National Park hiker, classic rock fan, wannabe
 
 I help (mostly large) organizations understand their potential. That means things like recognizing the dignity of individual employees and avoiding the risks of becoming the next Enron, Kodak, Blackberry, GM, you get the picture. Restructuring, product development, cross-disciplinary teams, APIs, opportunity costs, and design sprints are words that perk my ears.
 
-Today I work for the Federal Government with a bunch of great folk at [18F](https://18f.gsa.gov). We’re public servants helping other public servants moderize their approach to mission. We improve the workings of bureaucracy through prototypes, transformation initiatives, user-centered research, assisted acquisitions, and even full-blown product builds.
+Today I work for the Federal Government with a bunch of great folk at [18F](https://18f.gsa.gov). We’re public servants helping other public servants modernize their approach to mission. We improve the workings of bureaucracy through prototypes, transformation initiatives, user-centered research, assisted acquisitions, and even full-blown product builds.
 
 If you’re into market failure or where **not** to eat street meat in NYC check out some of my [blog posts](/read) or [work](/work). To keep up-to-date with my posts join my newsletter *The Externality*:
 <!-- Begin MailChimp Signup Form -->
