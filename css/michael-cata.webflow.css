@@ -149,7 +149,7 @@
 }
 
 body {
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   line-height: 100%;
 }
 
@@ -178,7 +178,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   margin-top: 0px;
   margin-bottom: .85em;
   font-size: 16px;
@@ -188,7 +188,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   margin-bottom: .6em;
   font-size: 16px;
   line-height: 20px;
@@ -197,7 +197,7 @@ h5 {
 }
 
 h6 {
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   margin-top: 0px;
   margin-bottom: .85em;
   font-size: 16px;
@@ -229,8 +229,8 @@ ol {
   margin-bottom: 10px;
   padding-left: 40px;
   padding-right: 100px;
-  font-family: 'Greycliff CF' ;
-  font-size: 1em; 
+  font-family: 'Neuton' ;
+  font-size: 1em;
 }
 
 li {
@@ -448,7 +448,7 @@ figcaption {
 }
 
 .nav-link.w--current {
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   color: #000;
 }
 
@@ -467,7 +467,7 @@ figcaption {
 }
 
 .site-name.w--current {
-  font-family: 'Greycliff CF', serif;
+  font-family: 'Neuton', serif;
   font-weight: 700;
 }
 
@@ -481,7 +481,7 @@ figcaption {
 .post-summary {
   display: block;
   margin-bottom: 14px;
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   font-size: 15px;
   line-height: 151%;
   font-weight: 400;
@@ -519,15 +519,15 @@ figcaption {
 }
 
 .body-copy {
-  font-family: 'Greycliff CF' ;
-  font-size: 17px;
+  font-family: 'Neuton' ;
+  font-size: 20px;
 }
 
 .body-copy p {
   margin-top: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Hind";
+  font-family: "Neuton", -apple-system, BlinkMacSystemFont, "Hind";
   color: #000;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.0px;
   text-rendering: optimizeLegibility;
@@ -548,8 +548,8 @@ figcaption {
 
 .body-copy li {
   margin-bottom: 3px;
-  font-family: -apple-system, BlinkMacSystemFont, "Hind" ;
-  font-size: 15.5px;
+  font-family: "Neuton", -apple-system, BlinkMacSystemFont, "Hind" ;
+  font-size: 18px;
 }
 
 .body-copy blockquote {
@@ -557,7 +557,7 @@ figcaption {
   padding-left: 18px;
   border-left-width: 4px;
   border-left-color: #333;
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   font-style: italic;
 }
 
@@ -603,7 +603,7 @@ figcaption {
 .blog-title {
   margin-top: 0px;
   margin-bottom: 10px;
-  font-family: 'Greycliff CF' ;
+  font-family: 'Neuton' ;
   font-size: 25px;
   line-height: 37px;
   font-style: normal;
@@ -633,7 +633,7 @@ figcaption {
   padding-bottom: 40px;
   border-bottom: 1px solid #d3d3d3;
   background-color: #fff;
-  font-family: 'Greycliff CFy' ;
+  font-family: "Neuton";
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
@@ -645,7 +645,7 @@ figcaption {
   display: block;
   margin-top: 13px;
   margin-bottom: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Hind" ;
+  font-family: "Neuton", -apple-system, BlinkMacSystemFont, "Hind";
   color: #293241;
   font-size: 1em;
   line-height: 145%;
@@ -743,7 +743,7 @@ figcaption {
 .content {
   width: 59%;
   margin-left: 26.0%;
-  padding: 75px 0px 10px 0px;
+  padding: 25px 0px 10px 0px;
   background-color: #fff;
 }
 
@@ -789,9 +789,9 @@ figcaption {
   margin-right: 0px;
   margin-bottom: 0px;
   padding: 0px;
-  font-family: 'Greycliff CF Extra' ;
+  font-family: 'Neuton' ;
   color: #23395B;
-  font-size: 1.79em;
+  font-size: 2.2em;
   line-height: 120%;
   font-style: normal;
   font-weight: 900;

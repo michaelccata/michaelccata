@@ -2,8 +2,6 @@
 layout: default
 title: about me
 ---
-
-
 ## Hey there, nice to meet you!
 
 My name is Michael Cata. I’m an National Park hiker, classic rock fan, wannabe economist, and tech/management consultant.
@@ -20,7 +18,7 @@ If you’re into market failure or where **not** to eat street meat in NYC check
 	 Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style>
 
-<div id="mc_embed_signup"><form action="//michaelcata.us11.list-manage.com/subscribe/post?u=bd76dc3adcabd1ddbbb2607f8&amp;id=243d280dcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate"><div id="mc_embed_signup_scroll"><h4>just need an email...</h4><h5 class="mc-field-group">...here&nbsp;<span class="asterisk">*</span></h5><div class="mc-field-group"><input type="email" value="" class="required email" id="mce-EMAIL" aria-required="true" name="EMAIL" /></div><p><a title="View previous campaigns" href="http://us11.campaign-archive2.com/home/?u=bd76dc3adcabd1ddbbb2607f8&amp;id=243d280dcd">View previous newsletters.</a></p><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none">&nbsp;</div><div class="response" id="mce-success-response" style="display:none">&nbsp;</div></div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" tabindex="-1" value="" name="b_bd76dc3adcabd1ddbbb2607f8_243d280dcd" /></div><div class="clear"><input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="button" name="subscribe" /></div></div></form></div>
+<div id="mc_embed_signup"><form action="//michaelcata.us11.list-manage.com/subscribe/post?u=bd76dc3adcabd1ddbbb2607f8&amp;id=243d280dcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate"><div id="mc_embed_signup_scroll"><h4></h4><h5 class="mc-field-group"><span class="asterisk">*</span></h5><div class="mc-field-group"><input type="email" value="" class="required email" id="mce-EMAIL" aria-required="true" name="EMAIL" /></div><p><a title="View previous campaigns" href="http://us11.campaign-archive2.com/home/?u=bd76dc3adcabd1ddbbb2607f8&amp;id=243d280dcd">View previous newsletters.</a></p><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none">&nbsp;</div><div class="response" id="mce-success-response" style="display:none">&nbsp;</div></div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" tabindex="-1" value="" name="b_bd76dc3adcabd1ddbbb2607f8_243d280dcd" /></div><div class="clear"><input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="button" name="subscribe" /></div></div></form></div>
 
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 
