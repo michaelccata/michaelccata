@@ -520,14 +520,14 @@ figcaption {
 
 .body-copy {
   font-family: 'Merriweather' ;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .body-copy p {
   margin-top: 10px;
   font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Hind";
   color: #000;
-  font-size: 20px;
+  font-size: .965em;
   font-weight: 400;
   letter-spacing: 0.0px;
   text-rendering: optimizeLegibility;
@@ -549,7 +549,7 @@ figcaption {
 .body-copy li {
   margin-bottom: 3px;
   font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Hind" ;
-  font-size: 18px;
+  font-size: .95em;
 }
 
 .body-copy blockquote {
@@ -742,7 +742,7 @@ figcaption {
 
 .content {
   width: 59%;
-  margin-left: 26.0%;
+  margin-left: 25.0%;
   padding: 25px 0px 10px 0px;
   background-color: #fff;
 }

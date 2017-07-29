@@ -3,92 +3,48 @@ layout: default
 title: about me
 ---
 
- 
-## Michael Cata is a management consultant in NYC. 
 
-He works with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. 
+## ...is a management consultant in NYC.
 
-He loves educating leaders on cross-functionality in organization design as much as pair-programming with the database folks to build APIs. Michael is the consultant who wants to get fired because he's no longer needed.
+I love working with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. My research and expertise focus on cross-functionality in organization design and how that affects large, strategic initiatives especially those including new technology.
 
-His work involves:
+**My work involves:**
 
-*  Highlighting latent capability in organizations. 
-*  Examining structural effects on team morale and potenial. 
-*  Coaching executives on what it *actually* means to "go digital." 
-*  Discovering meaningful starting-points for transformation efforts. 
-*  Looking for talent that's ready (and able) for a challenge. 
-*  Scrubbing in as a data scientist and crunch stats for any of the above activities.
+*  Highlighting latent capability in organizations.
+*  Examining structural effects on team morale and potential.
+*  Coaching executives on what it *actually* means to "go digital."
+*  Discovering meaningful starting-points for transformation efforts.
+*  Looking for talent that's ready (and able) for a challenge.
+*  Scrubbing in as a data scientist and crunching stats for any of the above activities.
 
+Today I work for the Federal Government with a bunch of great folk at [18F](https://18f.gsa.gov). We’re public servants helping other public servants modernize their approach to mission. We improve the workings of bureaucracy through prototypes, transformation initiatives, user-centered research, assisted acquisitions, and even full-blown product builds.
 
-In service of:
+Prior to government service I worked in the private sector on multiple reorganizations including financial services firms and other highly regulated industries. Restructuring, product development, cross-disciplinary teams, APIs, opportunity costs, and design sprints are words that perk my ears.
 
-*  Working with leadership [here](https://www.argolimited.com/pages/argo-group-home) to create three digital teams across the country that are building great product [here](eager.to). 
-*  Rebuilding compliance architecture, operations, and tools at a global bank.
-*  Developing a common mission for marketing with (idk let's say) the biggest snacks and beverage maker in the world.
-*  Testing and releasing a global payroll automation for (the most famous?) investment bank.
+**Example projects:**
 
+* Advised the United States Navy on a platform that helps sailors manage their career.
+* Worked with leadership [here](https://www.argolimited.com/pages/argo-group-home) to create three digital teams across the country that are building great product [here](eager.to).
+*  Rebuilt compliance architecture, operations, and tools at a global bank.
+*  Developed a common mission for marketing with the biggest snacks and beverage maker in the world.
+*  Tested and released a global payroll automation for the largest investment bank.
 
-<!-- **It's hard to believe, but productivity has slowed across the world.** It's harder to get things done despite the fact we are healthier, more educated, and in the midst of unprecedented access to capital. It's the best time in [human history to be alive](http://www.slideshare.net/exitcreative/organizational-design-in-the-21st-century), yet leaders see untapped opportunity every single day and front line employees feel constrained by bureaucracy. 
+In my spare time you can find me hiking a National Park, jamming out to some classic rock, reading economic history, drinking fancy coffee, or pouring over management documents from the 19th Century at the Library of Congress.
 
-**Everyone's trying to do the right thing, but it's still a clusterf&$*.**  
+Speaking of coffee, let's grab some if you're in NYC, [first cup's on me.](/coffee)
 
-The same questions emerge whether it's a too-big-to-fail bank, soft-drink conglomerate, or a United States government agency. Makers, leaders, and shareholders want to know:  
+Rather get an email? Sign up for my newsletter *The Externality*
+<link href="/css/mailchimp.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">/* #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style>
+<div id="mc_embed_signup"><form action="//michaelcata.us11.list-manage.com/subscribe/post?u=bd76dc3adcabd1ddbbb2607f8&amp;id=243d280dcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate"><div id="mc_embed_signup_scroll"><h4></h4><h5 class="mc-field-group"><span class="asterisk"></span></h5><div class="mc-field-group"><input type="email" value="" class="required email" id="mce-EMAIL" aria-required="true" name="EMAIL" /></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none">&nbsp;</div><div class="response" id="mce-success-response" style="display:none">&nbsp;</div></div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" tabindex="-1" value="" name="b_bd76dc3adcabd1ddbbb2607f8_243d280dcd" /></div><div class="clear"><input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="button" name="subscribe" /></div></div></form></div>
 
-1.	How do we build technology and scale solutions?  
-2.	Our organization feels clunky, what should we do about our workforce and structure?  
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 
-But it's rare to see those concerns expressed together. You can imagine certain corporate demographics asking one version over the other. COO/CIOs ask the former under increasing pressure to transform legacy processes and systems into automated, digital solutions. Everyone else in management is feeling the strains of last century's management thesis, they're asking the latter.   
-
-The irony is that both questions identify the same tension. Making anything today requires not only the use of technology but it's creation, maintenance and improvement. Few understand how to incorporate new tools and fewer grasp what's necessary to build an environment for an entirely different behavior and cadence of the workplace. 
-
-I've worked with organizations that fall in the buckets above and help teams focus 
-
-| **Organization Strategy** <br> <br> | **Data Science** <br> <br> | **Fun!** <br> <br>|
-| [Book Notice]({{base}}/about) <br> <br> [My Reading List]({{base}}/about) <br> <br>  [DoD's Transformation Challenges](http://www.thestrategybridge.com/the-bridge/2015/11/21/joint-forces-of-change-for-the-futureofwar) |  [Predicting Enron's Collapse]({{base}}/2015/07/01/enron-app.html) <br> <br> [The (Other) Cost of Subway Construction]({{base}}/2016/01/05/taxi-externality.html) <br> <br> [Overtime's Effect on DUIs]({{base}}/2016/06/18/overserved.html)  |  [AC/DC + Public Policy]({{base}}/2016/06/18/rocknoise.html) <br> <br> [We Lead Tested Our Apartment!]({{base}}/2016/07/03/pb-test.html) <br> <br> [Don't Eat Hotdogs in Midtown]({{base}}/2016/01/05/street-meat.html) |
-
-
-
-
-
-
-
-Traditional structures of "the IT shop" and "the business" operating in silos are breaking at the seams in a world that demands   
-
-People in developed countries have never been so educated, healthy, or ambitious in human existence. Capital (software, manufacturing tools, network infrastructure) has never been as accessible or scalable in the history of economics. Yet, productivity has been slowing since the mid-80s. Global growth is anemic. Shocking facts for anyone who's used a computer, perhaps expected for those who use computers with others.   
-
-People and capital aren't the problem. It's where they intersect: the organization. Most large institutions don't trust their team members to make decisions in isolation. There are endless rounds of analysis and vetting, approvals and sign-offs. Consensus is the default mode of discussion and decision making is at best opaque, at worst: nonexistent.  
-
-
-
-
-
-
-Most are not fit to survive in an era where a twelve person company with an AWS account can create a better product, faster than a billion dollar business unit. 
-
-Why? Because most billion dollar business units aren't structured in small, multidisciplinary teams oriented on an inspiring purpose and given the autonomy to ship product to users.
-
-The larger you are, the harder it is to [actively] manage the core economic decisions that determine the structure and composition of your team(s). 
-
-"Millennials" have become canaries in the coal mine. Top graduates from top schools are trading offers from banks and law firms for start-ups on the bet that their intuition is stronger than "legacy firms." Turnover within entry level Fortune 500 programs has grown to 75%.
-
-
-
-
-A)  A fuck-ton of dependencies and lack of autonomy at lower levels of the organization (think about needing CEO approval to buy a MacBook or escalation to a Vice Admiral for access to an API)
-
-B) Culture of hoarding and hiding, instead of finding complementary efforts. 
-
-C)  Restrictive financing models and internal capital allocation
-
-D)  Poor team design lacking either the requisite capabilities and/or a strong product owner 
-
+<script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br> -->
+<br>&nbsp;
 
-
-
+\*The material on this website might be very relevant to the work I do day-to-day, but nothing should be taken as the opinion, day dream, official position, policy mandate, or deep desire of my employer.

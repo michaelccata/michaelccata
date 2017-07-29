@@ -12,7 +12,7 @@ Today I work for the Federal Government with a bunch of great folk at [18F](http
 
 If you’re into market failure or where **not** to eat street meat in NYC check out some of my [blog posts](/read) or [work](/work). To keep up-to-date with my posts join my newsletter *The Externality*: <!-- Begin MailChimp Signup Form -->
 
-<link href="/css/mailchimp.css" rel="stylesheet" type="text/css" />
+<link href="/css/mailchimp.css" rel="stylesheet" type="text/css"/>
 
 <style type="text/css">/* #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	 Add your own MailChimp form style overrides in your site stylesheet or in this style block.
