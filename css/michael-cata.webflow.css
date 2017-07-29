@@ -149,7 +149,7 @@
 }
 
 body {
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   line-height: 100%;
 }
 
@@ -178,7 +178,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   margin-top: 0px;
   margin-bottom: .85em;
   font-size: 16px;
@@ -188,7 +188,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   margin-bottom: .6em;
   font-size: 16px;
   line-height: 20px;
@@ -197,7 +197,7 @@ h5 {
 }
 
 h6 {
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   margin-top: 0px;
   margin-bottom: .85em;
   font-size: 16px;
@@ -213,7 +213,7 @@ p {
 }
 
 a {
-  color: #24a7ff;
+  color: #1B4079;
   text-decoration: underline;
 }
 
@@ -229,7 +229,7 @@ ol {
   margin-bottom: 10px;
   padding-left: 40px;
   padding-right: 100px;
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   font-size: 1em;
 }
 
@@ -435,7 +435,7 @@ figcaption {
   padding: 6px 0px;
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
-  color: #fd4421;
+  color: #204a87;
   font-size: 15.5px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -448,7 +448,7 @@ figcaption {
 }
 
 .nav-link.w--current {
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   color: #000;
 }
 
@@ -467,7 +467,7 @@ figcaption {
 }
 
 .site-name.w--current {
-  font-family: 'Neuton', serif;
+  font-family: 'Merriweather', serif;
   font-weight: 700;
 }
 
@@ -481,7 +481,7 @@ figcaption {
 .post-summary {
   display: block;
   margin-bottom: 14px;
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   font-size: 15px;
   line-height: 151%;
   font-weight: 400;
@@ -519,13 +519,13 @@ figcaption {
 }
 
 .body-copy {
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   font-size: 20px;
 }
 
 .body-copy p {
   margin-top: 10px;
-  font-family: "Neuton", -apple-system, BlinkMacSystemFont, "Hind";
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Hind";
   color: #000;
   font-size: 20px;
   font-weight: 400;
@@ -548,7 +548,7 @@ figcaption {
 
 .body-copy li {
   margin-bottom: 3px;
-  font-family: "Neuton", -apple-system, BlinkMacSystemFont, "Hind" ;
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Hind" ;
   font-size: 18px;
 }
 
@@ -557,7 +557,7 @@ figcaption {
   padding-left: 18px;
   border-left-width: 4px;
   border-left-color: #333;
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   font-style: italic;
 }
 
@@ -603,7 +603,7 @@ figcaption {
 .blog-title {
   margin-top: 0px;
   margin-bottom: 10px;
-  font-family: 'Neuton' ;
+  font-family: 'Merriweather' ;
   font-size: 25px;
   line-height: 37px;
   font-style: normal;
@@ -633,7 +633,7 @@ figcaption {
   padding-bottom: 40px;
   border-bottom: 1px solid #d3d3d3;
   background-color: #fff;
-  font-family: "Neuton";
+  font-family: "Merriweather";
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
@@ -645,7 +645,7 @@ figcaption {
   display: block;
   margin-top: 13px;
   margin-bottom: 20px;
-  font-family: "Neuton", -apple-system, BlinkMacSystemFont, "Hind";
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Hind";
   color: #293241;
   font-size: 1em;
   line-height: 145%;
@@ -789,8 +789,8 @@ figcaption {
   margin-right: 0px;
   margin-bottom: 0px;
   padding: 0px;
-  font-family: 'Neuton' ;
-  color: #23395B;
+  font-family: 'Merriweather' ;
+  color: #1B4079;
   font-size: 2.5em;
   line-height: 120%;
   font-style: normal;
