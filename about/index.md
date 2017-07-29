@@ -4,16 +4,16 @@ title: about me
 ---
 
 
-## ...is a management consultant in NYC.
+## Hey there, nice to meet you!
 
-I love working with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. My research and expertise focus on cross-functionality in organization design and how that affects large, strategic initiatives especially those including new technology.
+I'm a management consultant based in NYC. I love working with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. My research and expertise focus on cross-functionality in organization design and how that affects large, strategic initiatives especially those including new technology.
 
 **My work involves:**
 
-*  Highlighting latent capability in organizations.
-*  Examining structural effects on team morale and potential.
+*  Discovering latent capability in organizations.
 *  Coaching executives on what it *actually* means to "go digital."
-*  Discovering meaningful starting-points for transformation efforts.
+*  Examining structural (skills, capital, market) effects on team morale and potential.
+*  Identifying meaningful starting-points for transformation efforts.
 *  Looking for talent that's ready (and able) for a challenge.
 *  Scrubbing in as a data scientist and crunching stats for any of the above activities.
 
