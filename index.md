@@ -7,6 +7,8 @@ title: about me
 
 I'm a management consultant based in NYC. I love working with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. My research and expertise focus on cross-functionality in organization design and how that affects large, strategic initiatives especially those including new technology.
 
+I do this full time @ [McCallum & Partners](https://mccallumpartners.org) as the founder and pretty much sole employee.
+
 **My work involves:**
 
 *  Discovering latent capability in organizations.
@@ -16,7 +18,7 @@ I'm a management consultant based in NYC. I love working with large organization
 *  Looking for talent that's ready (and able) for a challenge.
 *  Scrubbing in as a data scientist and crunching stats for any of the above activities.
 
-Today I work for the Federal Government with a bunch of great folk at [18F](https://18f.gsa.gov). We’re public servants helping other public servants modernize their approach to mission. We improve the workings of bureaucracy through prototypes, transformation initiatives, user-centered research, assisted acquisitions, and even full-blown product builds.
+Before starting my own company, I worked as a civil servant in the Federal Government with a bunch of great folk at [18F](https://18f.gsa.gov): public servants helping other public servants modernize their approach to mission. We improved the workings of bureaucracy through prototypes, transformation initiatives, user-centered research, assisted acquisitions, and even full-blown product builds. I was the product manager for this, fairly important, [project](https://github.com/18F/culper/wiki) that rebuilt how federal employees apply for security and suitability investigations, i.e. background checks and security clearances.
 
 Prior to government service I worked in the private sector on multiple reorganizations including financial services firms and other highly regulated industries. Restructuring, product development, cross-disciplinary teams, APIs, opportunity costs, and design sprints are words that perk my ears.
 
