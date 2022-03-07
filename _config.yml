@@ -8,7 +8,7 @@ timezone: America/New_York
 future: TRUE
 
 # blog related ish
-gems: [jekyll-paginate, kramdown, rouge]
+gems: [jekyll-paginate, kramdown 2.3.1, rouge]
 excerpt_separator: <!–break–>
 paginate: 5
 paginate_path: "read/page:num"
