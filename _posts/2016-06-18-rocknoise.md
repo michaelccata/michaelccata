@@ -22,7 +22,7 @@ Begs the question: what role does rock music play in noise pollution? How often 
 	height:23.25em; 
 	display: block;
     margin: 0 auto;">
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="{{base}}/lib/dimple.v2.2.0.min.js"></script>
   <script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 600, 400);
