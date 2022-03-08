@@ -51,7 +51,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-paginate
-  rexml (>= 0)
-
+  rexml
+  
 BUNDLED WITH
    2.0.0
