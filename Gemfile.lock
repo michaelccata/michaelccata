@@ -5,6 +5,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
     ffi (1.15.5)
+    rexml (3.2.5)
+
     forwardable-extended (2.6.0)
     jekyll (3.6.3)
       addressable (~> 2.4)
@@ -42,7 +44,6 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    rexml (3.2.5)
 
     
 
