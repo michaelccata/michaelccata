@@ -164,7 +164,7 @@ h1 {
 h2 {
   margin-top: 30px;
   margin-bottom: 20px;
-  font-size: 27px;
+  font-size: 1em;
   line-height: 135%;
   font-weight: 600;
 }
@@ -527,7 +527,7 @@ figcaption {
   margin-top: 10px;
   font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Hind";
   color: #000;
-  font-size: .965em;
+  font-size: .75em;
   font-weight: 400;
   letter-spacing: 0.0px;
   text-rendering: optimizeLegibility;
