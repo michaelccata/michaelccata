@@ -4,44 +4,43 @@ title: about me
 ---
 
 
-## Hey there, nice to meet you!
+## Hey there, I'm Michael, nice to meet you!
 
-I'm a management consultant based in NYC. I love working with large organizations eager to move from endless "strategy and planning" to actually making stuff. Today that often includes technology and, more often, the teams necessary to build great digital products. My research and expertise focus on cross-functionality in organization design and how that affects large, strategic initiatives especially those including new technology.
+I'm a management consultant who, sometimes, writes code. I love helping organizations (big and small) move from endless planning to actually building great products. My expertise lies in cross-functional organization design and its impact on strategic initiatives, particularly those involving new technology. Currently, I work at [Etsy](https://etsy.com) as a researcher and strategist for our international growth team, collaborating across product and marketing teams to create a better marketplace for buyers and sellers worldwide.
 
-I do this full time @ [McCallum & Partners](https://mccallumpartners.org) as the founder and pretty much sole employee.
 
-**My work involves:**
+**My career history:**
 
-*  Discovering latent capability in organizations.
-*  Coaching executives on what it *actually* means to "go digital."
-*  Examining structural (skills, capital, market) effects on team morale and potential.
-*  Identifying meaningful starting-points for transformation efforts.
-*  Looking for talent that's ready (and able) for a challenge.
-*  Scrubbing in as a data scientist and crunching stats for any of the above activities.
+_Short:_
 
-Before starting my own company, I worked as a civil servant in the Federal Government with a bunch of great folk at [18F](https://18f.gsa.gov): public servants helping other public servants modernize their approach to mission. We improved the workings of bureaucracy through prototypes, transformation initiatives, user-centered research, assisted acquisitions, and even full-blown product builds. I was the product manager for this, fairly important, [project](https://github.com/18F/culper/wiki) that rebuilt how federal employees apply for security and suitability investigations, i.e. background checks and security clearances.
+* Optimized Etsy's product discovery localization across billions of visits
+* Integrated two marketplace acquisitions under Etsy's corporate umbrella (and spun one out) [Elo7](https://www.prnewswire.com/news-releases/etsy-completes-acquisition-of-elo7-brazil-based-marketplace-for-unique-handmade-items-301325747.html) [Depop](https://www.prnewswire.com/news-releases/etsy-to-acquire-global-fashion-resale-marketplace-depop-301303695.html) [Elo7-Spinout]()
+* Launched a cloud-based policy forms library for a publicly traded insurance company 
+* Rebuilt the federal background investigation system following a major security breach [Code, Wiki](https://github.com/18F/culper/wiki) [Production](https://www.dcsa.mil/Systems-Applications/National-Background-Investigation-Services-NBIS/) 
+* Advised the US Navy on a career management platform for sailors [MyNavy](https://my.navy.mil/)
+* Created three digital product teams for an international insurance group [Argo Digital](https://www.argolimited.com/reports/2019-annual-report/argo-digital/) [Press](https://www.bizjournals.com/sanantonio/news/2018/12/21/argo-group-invests-in-tech-to-push-productivity.html)
+* Reorganized compliance architecture and operations for a global bank
+* Developed unified marketing strategy for a leading global food and beverage company
+* Implemented global payroll automation for a major investment bank
 
-Prior to government service I worked in the private sector on multiple reorganizations including financial services firms and other highly regulated industries. Restructuring, product development, cross-disciplinary teams, APIs, opportunity costs, and design sprints are words that perk my ears.
 
-**Example projects:**
+_Long_
 
-* Advised the United States Navy on a platform that helps sailors manage their career.
-* Worked with leadership [here](https://www.argolimited.com/pages/argo-group-home) to create three digital teams across the country that are building great product [here](eager.to).
-*  Rebuilt compliance architecture, operations, and tools at a global bank.
-*  Developed a common mission for marketing with the biggest snacks and beverage maker in the world.
-*  Tested and released a global payroll automation for the largest investment bank.
+I am a turnaround specialist focused on reorganizations, technology modernization, and data analysis. At Etsy, as the International Strategy and Analytics, M&A Corporate Integration Senior Manager, I've implemented multi-million dollar efficiencies by localizing product listing feeds across numerous countries and optimized subsidiary operations through a global approach.
 
-In my spare time you can find me hiking a National Park, jamming out to some classic rock, reading economic history, drinking fancy coffee, or pouring over management documents from the 19th Century at the Library of Congress.
+Before joining Etsy, I founded McCallum & Partners, specializing in strategy and code integration. My standout achievement was rebuilding a publicly-traded insurance company's policy forms database in just six months, transforming an on-premises application into a modern cloud-native solution serving over 10,000 policy documents.
 
-Speaking of coffee, let's grab some if you're in NYC, [first cup's on me.](/coffee)
+At the General Services Administration 18F, I spent nearly five years managing approximately $10 million in consulting projects across federal agencies. I led a 12-person software team with a $3 million budget to modernize the government's background investigation system, which handles over one million checks annually.
 
-Rather get an email? Sign up for my newsletter *The Externality*
-<link href="/css/mailchimp.css" rel="stylesheet" type="text/css"/>
-<div id="mc_embed_signup"><form action="//michaelcata.us11.list-manage.com/subscribe/post?u=bd76dc3adcabd1ddbbb2607f8&amp;id=243d280dcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate"><div id="mc_embed_signup_scroll"><div class="mc-field-group"><input type="email" value="" class="required email" id="mce-EMAIL" aria-required="true" name="EMAIL" /></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none">&nbsp;</div><div class="response" id="mce-success-response" style="display:none">&nbsp;</div></div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" tabindex="-1" value="" name="b_bd76dc3adcabd1ddbbb2607f8_243d280dcd" /></div><div style="font-family: 'Merriweather'" class="clear"><input type="submit" value="Subscribe" id="mc-embedded-subscribe" class="button" name="subscribe" /></div></div></form></div>
+My earlier roles included strategic work at Undercurrent, where I led an 18-month engagement developing digital strategy and building cross-functional teams that eventually generated $20+ million in premiums. I began my career at IBM implementing enterprise solutions for global payroll automation, after graduating from Ohio State University with a Bachelor's in Economics and Political Science.
 
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
 
-<script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->
+**Personal notes:**
+In my spare time you can find me hiking a National Park, jamming out to some classic rock, reading economic history, finding coffee shops, or pouring over management documents from the 19th Century at the Library of Congress.
+
+
+**Coffee!**
+Speaking of coffee, let's grab some if you're in the Queen City, [first cup's on me.](/coffee)
 
 <br>
 <br>&nbsp;
