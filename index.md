@@ -13,10 +13,10 @@ I'm a management consultant who, sometimes, writes code. I love helping organiza
 _Short:_
 
 * Optimized Etsy's product discovery localization across billions of visits
-* Integrated two marketplace acquisitions under Etsy's corporate umbrella (and spun one out)  [Elo7](https://www.prnewswire.com/news-releases/etsy-completes-acquisition-of-elo7-brazil-based-marketplace-for-unique-handmade-items-301325747.html)  |  [Depop](https://www.prnewswire.com/news-releases/etsy-to-acquire-global-fashion-resale-marketplace-depop-301303695.html)  |  [Elo7-Spinout]()
+* Integrated two marketplace acquisitions under Etsy's corporate umbrella (and spun one out) -- [Elo7](https://www.prnewswire.com/news-releases/etsy-completes-acquisition-of-elo7-brazil-based-marketplace-for-unique-handmade-items-301325747.html),  [Depop](https://www.prnewswire.com/news-releases/etsy-to-acquire-global-fashion-resale-marketplace-depop-301303695.html),  [Elo7-Spinout]()
 * Launched a cloud-based policy forms library for a publicly traded insurance company 
-* Rebuilt the federal background investigation system following a major security breach [Code, Wiki](https://github.com/18F/culper/wiki)  | 
- [Production](https://www.dcsa.mil/Systems-Applications/National-Background-Investigation-Services-NBIS/) 
+* Rebuilt the federal background investigation system following a major security breach -- [Code, Wiki](https://github.com/18F/culper/wiki), 
+  [Production](https://www.dcsa.mil/Systems-Applications/National-Background-Investigation-Services-NBIS/) 
 * Advised the US Navy on a career management platform for sailors [MyNavy](https://my.navy.mil/)
 * Created three digital product teams for an international insurance group [Argo Digital](https://www.argolimited.com/reports/2019-annual-report/argo-digital/) [Press](https://www.bizjournals.com/sanantonio/news/2018/12/21/argo-group-invests-in-tech-to-push-productivity.html)
 * Reorganized compliance architecture and operations for a global bank
