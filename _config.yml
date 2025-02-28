@@ -1,19 +1,34 @@
 
-# keeping the lights-on specs
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# Site configuration
 baseurl: ""
 timezone: America/New_York
 future: TRUE
 
-# blog related ish
-gems: [jekyll-paginate, kramdown, rouge]
-excerpt_separator: <!–break–>
-paginate: 5
-paginate_path: "read/page:num"
+# Build settings
 markdown: kramdown
+highlighter: rouge
+
+# Kramdown settings
 kramdown: 
   input: GFM
   syntax_highlighter: rouge
-highlighter: rouge
+
+# Blog settings
+excerpt_separator: <!–break–>
+paginate: 5
+paginate_path: "read/page:num"
+
+# Plugins (note: 'gems' is deprecated, use 'plugins' instead)
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Files to exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
